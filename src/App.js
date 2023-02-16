@@ -55,16 +55,31 @@ class App extends Component {
     const { currentUser, showAdminBoard } = this.state;
 
     return (
-      <div>
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <Link to={"/"} className="navbar-brand">
-            Avatar
-          </Link>
+      <div className="menuApp">
+        <nav className="navbar navbar-expand">
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={"/home"} className="nav-link">
                 Home
               </Link>
+            </li>
+
+            <li className="nav-item">
+              <a target="_blank" href="http://localhost:8000" className="nav-link" rel="noreferrer">
+                university
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a target="_blank" href="http://localhost:8002" className="nav-link" rel="noreferrer">
+                attendance
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a target="_blank" href="http://localhost:8003" className="nav-link" rel="noreferrer">
+                admin
+              </a>
             </li>
 
             {showAdminBoard && (
@@ -80,7 +95,7 @@ class App extends Component {
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={this.logOut}>
-                  LogOut
+                  Log out
                 </a>
               </li>
             </div>

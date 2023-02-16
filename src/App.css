@@ -30,3 +30,13 @@ label {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+.menuApp {
+  background-color: rgb(1, 1, 133);
+  height: 1000px;
+}
+
+.menuApp nav div li {
+  color: white;
+  font-size: 18px;
+}
