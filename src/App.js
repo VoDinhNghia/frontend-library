@@ -7,7 +7,9 @@ import Home from "./components/home";
 import BoardLibrarian from "./components/dashboardLibrarian";
 import BoardAdmin from "./components/dashboardAdmin";
 import BoardStudents from "./components/dashboardStudents";
-import PrivateRoute from './common/ProtectedRouter';
+import PrivateRouteAdmin from './common/protectedRouteAdmin';
+import PrivateRouterLibrarian from './common/protectedRouteLibrarian';
+import PrivateRouteStudent from './common/protectedRouteStudent';
 import Footer from "./components/footer";
 import MenuMain from "./components/menuMain";
 import NotFoundRoute from "./components/notfoundPage";
@@ -32,9 +34,9 @@ class App extends Component {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard-librarian" element={<PrivateRoute><BoardLibrarian /></PrivateRoute>} />
-            <Route path="/dashboard-students" element={<PrivateRoute><BoardStudents /></PrivateRoute>} />
-            <Route path="/dashboard-admin" element={<PrivateRoute><BoardAdmin /></PrivateRoute>} />
+            <Route path="/dashboard-librarian" element={<PrivateRouterLibrarian><BoardLibrarian /></PrivateRouterLibrarian>} />
+            <Route path="/dashboard-students" element={<PrivateRouteStudent><BoardStudents /></PrivateRouteStudent>} />
+            <Route path="/dashboard-admin" element={<PrivateRouteAdmin><BoardAdmin /></PrivateRouteAdmin>} />
             <Route path="*" element={<NotFoundRoute />} />
           </Routes>
         </div>

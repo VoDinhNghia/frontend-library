@@ -42,10 +42,10 @@ export default function Footer() {
                 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TP. HCM
               </p>
               <p>
-                email:
+                email: vodinhnghia85@gmail.com
               </p>
               <p>
-                Phone: +84 
+                Phone: (+84) 0365572875
               </p>
             </MDBCol>
           </MDBRow>
@@ -53,7 +53,7 @@ export default function Footer() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2023 Industrial University of Ho Chi Minh City
+        © 2023 VDN
       </div>
     </MDBFooter>
   );

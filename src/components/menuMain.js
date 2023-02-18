@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../services/authService";
 import EventBus from "../common/eventBus";
+import { roles } from "../common/constant";
 
 export default class MenuMain extends Component {
   constructor(props) {
@@ -22,9 +23,9 @@ export default class MenuMain extends Component {
     if (user) {
       this.setState({
         currentUser: user,
-        showLibraryBoard: user.role.includes("LIBRARIAN"),
-        showAdminBoard: user.role.includes("ADMIN"),
-        showUserBoard: user.role.includes("STUDENT"),
+        showLibraryBoard: user.role.includes(roles.LIBRARIAN),
+        showAdminBoard: user.role.includes(roles.ADMIN),
+        showUserBoard: user.role.includes(roles.STUDENT) || user.role.includes(roles.LECTURER),
       });
     }
     
@@ -49,7 +50,7 @@ export default class MenuMain extends Component {
   render() {
     const { currentUser, showLibraryBoard, showAdminBoard } = this.state;
     return (
-        <nav className="navbar navbar-expand">
+        <nav className="navbar navbar-expand bg-light">
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link to={"/home"} className="nav-link">
