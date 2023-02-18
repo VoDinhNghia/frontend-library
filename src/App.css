@@ -31,12 +31,11 @@ label {
   border-radius: 50%;
 }
 
-.menuApp {
+.AppMain {
   background-color: rgb(1, 1, 133);
-  height: 1000px;
 }
 
-.menuApp nav div li {
+.AppMain nav div li {
   color: white;
   font-size: 18px;
 }
