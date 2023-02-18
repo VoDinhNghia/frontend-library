@@ -35,7 +35,7 @@ label {
   background-color: rgb(1, 1, 133);
 }
 
-.AppMain nav div li {
-  color: white;
+.AppMain nav {
+  color: red;
   font-size: 18px;
 }
