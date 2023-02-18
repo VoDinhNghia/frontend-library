@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+import { roles } from "../common/constant";
 
 import AuthService from "../services/authService";
 
@@ -58,13 +59,16 @@ class Login extends Component {
       AuthService.login(this.state.username, this.state.password).then(
         (response) => {
           switch (response.data.role) {
-            case 'LIBRARIAN':
+            case roles.LIBRARIAN:
               this.props.router.navigate("/dashboard-librarian");
               break;
-            case 'ADMIN':
+            case roles.ADMIN:
               this.props.router.navigate("/dashboard-admin");
               break;
-            case 'STUDENT':
+            case roles.STUDENT:
+              this.props.router.navigate("/dashboard-students");
+              break;
+            case roles.LECTURER:
               this.props.router.navigate("/dashboard-students");
               break;
             default:
