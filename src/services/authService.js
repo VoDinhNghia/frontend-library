@@ -1,17 +1,18 @@
 import axios from "axios";
-
+import { localStorageItem } from "../common/constant";
+import { routes } from "../common/constant";
 const API_URL = "http://localhost:3002/auth";
 
 class AuthService {
   login(email, passWord) {
     return axios
-      .post(`${API_URL}/login`, {
+      .post(`${API_URL}${routes.LOGIN}`, {
         email,
         passWord
       })
       .then(response => {
         if (response.data.data.accessToken) {
-          localStorage.setItem("user", JSON.stringify(response.data.data));
+          localStorage.setItem(localStorageItem.USER, JSON.stringify(response.data.data));
         }
 
         return response.data;
@@ -19,11 +20,11 @@ class AuthService {
   }
 
   logout() {
-    localStorage.removeItem("user");
+    localStorage.removeItem(localStorageItem.USER);
   }
 
   getCurrentUser() {
-    return JSON.parse(localStorage.getItem('user'));;
+    return JSON.parse(localStorage.getItem(localStorageItem.USER));;
   }
 }
 

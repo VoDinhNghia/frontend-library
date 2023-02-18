@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-import { roles } from "../common/constant";
+import { roles, routes } from "../common/constant";
 
 import AuthService from "../services/authService";
 
@@ -60,16 +60,16 @@ class Login extends Component {
         (response) => {
           switch (response.data.role) {
             case roles.LIBRARIAN:
-              this.props.router.navigate("/dashboard-librarian");
+              this.props.router.navigate(routes.DASHBOARD_LIBRARIAN);
               break;
             case roles.ADMIN:
-              this.props.router.navigate("/dashboard-admin");
+              this.props.router.navigate(routes.DASHBOARD_ADMIN);
               break;
             case roles.STUDENT:
-              this.props.router.navigate("/dashboard-students");
+              this.props.router.navigate(routes.DASHBOARD_STUDENTS);
               break;
             case roles.LECTURER:
-              this.props.router.navigate("/dashboard-students");
+              this.props.router.navigate(routes.DASHBOARD_STUDENTS);
               break;
             default:
               this.props.router.navigate("/notfound");
