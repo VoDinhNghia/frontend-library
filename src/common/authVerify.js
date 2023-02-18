@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { withRouter } from "./withRouter";
+import { localStorageItem } from "./constant";
 
 const parseJwt = (token) => {
   try {
@@ -13,7 +14,7 @@ const AuthVerify = (props) => {
   let location = props.router.location;
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem(localStorageItem.USER));
 
     if (user) {
       const decodedJwt = parseJwt(user.accessToken);

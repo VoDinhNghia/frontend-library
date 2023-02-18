@@ -13,6 +13,7 @@ import PrivateRouteStudent from './common/protectedRouteStudent';
 import Footer from "./components/footer";
 import MenuMain from "./components/menuMain";
 import NotFoundRoute from "./components/notfoundPage";
+import { routes } from "./common/constant";
 
 class App extends Component {
   constructor(props) {
@@ -32,11 +33,11 @@ class App extends Component {
         <div className="container mt-3">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard-librarian" element={<PrivateRouterLibrarian><BoardLibrarian /></PrivateRouterLibrarian>} />
-            <Route path="/dashboard-students" element={<PrivateRouteStudent><BoardStudents /></PrivateRouteStudent>} />
-            <Route path="/dashboard-admin" element={<PrivateRouteAdmin><BoardAdmin /></PrivateRouteAdmin>} />
+            <Route path={routes.HOME} element={<Home />} />
+            <Route path={routes.LOGIN} element={<Login />} />
+            <Route path={routes.DASHBOARD_LIBRARIAN} element={<PrivateRouterLibrarian><BoardLibrarian /></PrivateRouterLibrarian>} />
+            <Route path={routes.DASHBOARD_STUDENTS} element={<PrivateRouteStudent><BoardStudents /></PrivateRouteStudent>} />
+            <Route path={routes.DASHBOARD_ADMIN} element={<PrivateRouteAdmin><BoardAdmin /></PrivateRouteAdmin>} />
             <Route path="*" element={<NotFoundRoute />} />
           </Routes>
         </div>
