@@ -57,7 +57,20 @@ class Login extends Component {
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(this.state.username, this.state.password).then(
         (response) => {
-          this.props.router.navigate("/dashboard");
+          switch (response.data.role) {
+            case 'LIBRARIAN':
+              this.props.router.navigate("/dashboard-librarian");
+              break;
+            case 'ADMIN':
+              this.props.router.navigate("/dashboard-admin");
+              break;
+            case 'STUDENT':
+              this.props.router.navigate("/dashboard-students");
+              break;
+            default:
+              this.props.router.navigate("/notfound");
+              break;
+          }
           window.location.reload();
         },
         error => {

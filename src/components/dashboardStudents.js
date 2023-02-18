@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class BoardAdmin extends Component {
+export default class BoardStudents extends Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +13,7 @@ export default class BoardAdmin extends Component {
     return (
       <div className="container">
         <header className="jumbotron">
-          <h3>Dashboard page</h3>
+          <h3>Dashboard students page</h3>
         </header>
       </div>
     );
