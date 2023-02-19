@@ -4,7 +4,7 @@ export default class Home extends Component {
     super(props);
 
     this.state = {
-      content: 'hello'
+      content: "hello",
     };
   }
 
@@ -14,7 +14,9 @@ export default class Home extends Component {
         <header className="jumbotron">
           <h3>Tin tức - Sự kiện</h3>
           <ul>
-            <li><a href="http://localhost:8001/new-book">Sách mới</a></li>
+            <li>
+              <a href="http://localhost:8001/new-book">Sách mới</a>
+            </li>
           </ul>
         </header>
         <header className="jumbotron">

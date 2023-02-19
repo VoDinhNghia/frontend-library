@@ -1,6 +1,6 @@
-import axios from 'axios';
-import authHeader from './authHeader';
-import { API_URL } from '../common/constant';
+import axios from "axios";
+import authHeader from "./authHeader";
+import { API_URL } from "../common/constant";
 
 class LibraryService {
   getInfoLibrary() {
@@ -8,7 +8,11 @@ class LibraryService {
   }
 
   updateInfo(id, body) {
-    return axios.put(`${API_URL}libraries/${id}`, body, { headers: authHeader() }).then((response) => { return response.data || {} })
+    return axios
+      .put(`${API_URL}libraries/${id}`, body, { headers: authHeader() })
+      .then((response) => {
+        return response.data || {};
+      });
   }
 }
 

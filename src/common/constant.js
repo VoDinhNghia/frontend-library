@@ -1,25 +1,25 @@
 export const roles = {
-    ADMIN: 'ADMIN',
-    STUDENT: 'STUDENT',
-    LECTURER: 'LECTURER',
-    LIBRARIAN: 'LIBRARIAN',
+  ADMIN: "ADMIN",
+  STUDENT: "STUDENT",
+  LECTURER: "LECTURER",
+  LIBRARIAN: "LIBRARIAN",
 };
 
 export const localStorageItem = {
-    USER: 'user',
-}
+  USER: "user",
+};
 
 export const routes = {
-    LOGIN: "/login",
-    HOME: "/home",
-    DASHBOARD_LIBRARIAN: "/dashboard-librarian",
-    DASHBOARD_STUDENTS: "/dashboard-students",
-    DASHBOARD_ADMIN: "/dashboard-admin",
-}
+  LOGIN: "/login",
+  HOME: "/home",
+  DASHBOARD_LIBRARIAN: "/dashboard-librarian",
+  DASHBOARD_STUDENTS: "/dashboard-students",
+  DASHBOARD_ADMIN: "/dashboard-admin",
+};
 
-export const API_URL = 'http://localhost:3002/'
+export const API_URL = "http://localhost:3002/";
 
 export const LINKS = {
-    UNIVERSITY: 'http://localhost:8000',
-    ATTENDANCE: 'http://localhost:8002',
-}
+  UNIVERSITY: "http://localhost:8000",
+  ATTENDANCE: "http://localhost:8002",
+};

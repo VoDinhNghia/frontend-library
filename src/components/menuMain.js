@@ -25,10 +25,12 @@ export default class MenuMain extends Component {
         currentUser: user,
         showLibraryBoard: user?.role?.includes(roles.LIBRARIAN),
         showAdminBoard: user?.role?.includes(roles.ADMIN),
-        showUserBoard: user?.role?.includes(roles.STUDENT) || user?.role?.includes(roles.LECTURER),
+        showUserBoard:
+          user?.role?.includes(roles.STUDENT) ||
+          user?.role?.includes(roles.LECTURER),
       });
     }
-    
+
     EventBus.on("logout", () => {
       this.logOut();
     });
@@ -50,7 +52,7 @@ export default class MenuMain extends Component {
   render() {
     const { currentUser, showLibraryBoard, showAdminBoard } = this.state;
     return (
-        <nav className="navbar navbar-expand bg-light">
+      <nav className="navbar navbar-expand bg-light">
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link to={routes.HOME} className="nav-link">
@@ -59,13 +61,23 @@ export default class MenuMain extends Component {
           </li>
 
           <li className="nav-item">
-            <a target="_blank" href={LINKS.UNIVERSITY} className="nav-link" rel="noreferrer">
+            <a
+              target="_blank"
+              href={LINKS.UNIVERSITY}
+              className="nav-link"
+              rel="noreferrer"
+            >
               university
             </a>
           </li>
 
           <li className="nav-item">
-            <a target="_blank" href={LINKS.ATTENDANCE} className="nav-link" rel="noreferrer">
+            <a
+              target="_blank"
+              href={LINKS.ATTENDANCE}
+              className="nav-link"
+              rel="noreferrer"
+            >
               attendance
             </a>
           </li>
