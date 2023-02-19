@@ -1,12 +1,12 @@
 import axios from "axios";
 import { localStorageItem } from "../common/constant";
 import { routes } from "../common/constant";
-const API_URL = "http://localhost:3002/auth";
+import { API_URL } from "../common/constant";
 
 class AuthService {
   login(email, passWord) {
     return axios
-      .post(`${API_URL}${routes.LOGIN}`, {
+      .post(`${API_URL}auth${routes.LOGIN}`, {
         email,
         passWord
       })

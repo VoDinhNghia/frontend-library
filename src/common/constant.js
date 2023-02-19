@@ -16,3 +16,5 @@ export const routes = {
     DASHBOARD_STUDENTS: "/dashboard-students",
     DASHBOARD_ADMIN: "/dashboard-admin",
 }
+
+export const API_URL = 'http://localhost:3002/'
