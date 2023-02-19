@@ -1,11 +1,10 @@
 import axios from 'axios';
 import authHeader from './authHeader';
-
-const API_URL = 'http://localhost:3002/users/';
+import { API_URL } from '../common/constant';
 
 class UserService {
   getAllUsers() {
-    return axios.get(API_URL, { headers: authHeader() });
+    return axios.get(`${API_URL}users/`, { headers: authHeader() });
   }
 }
 
