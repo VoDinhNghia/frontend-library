@@ -2,4 +2,9 @@
     color: black;
     width: 60px;
     border: none;
+    font-size: 18px;
+}
+
+.nameLibrary {
+    width: 100%;
 }
