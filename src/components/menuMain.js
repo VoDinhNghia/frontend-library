@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../services/authService";
 import EventBus from "../common/eventBus";
-import { roles, routes } from "../common/constant";
+import { roles, routes, LINKS } from "../common/constant";
 
 export default class MenuMain extends Component {
   constructor(props) {
@@ -59,13 +59,13 @@ export default class MenuMain extends Component {
           </li>
 
           <li className="nav-item">
-            <a target="_blank" href="http://localhost:8000" className="nav-link" rel="noreferrer">
+            <a target="_blank" href={LINKS.UNIVERSITY} className="nav-link" rel="noreferrer">
               university
             </a>
           </li>
 
           <li className="nav-item">
-            <a target="_blank" href="http://localhost:8002" className="nav-link" rel="noreferrer">
+            <a target="_blank" href={LINKS.ATTENDANCE} className="nav-link" rel="noreferrer">
               attendance
             </a>
           </li>

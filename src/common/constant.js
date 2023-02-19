@@ -18,3 +18,8 @@ export const routes = {
 }
 
 export const API_URL = 'http://localhost:3002/'
+
+export const LINKS = {
+    UNIVERSITY: 'http://localhost:8000',
+    ATTENDANCE: 'http://localhost:8002',
+}
