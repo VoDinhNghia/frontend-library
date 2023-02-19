@@ -5,7 +5,7 @@ export default class BoardLibrarian extends Component {
     super(props);
 
     this.state = {
-      content: ""
+      content: "",
     };
   }
 

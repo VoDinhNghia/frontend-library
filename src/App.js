@@ -7,9 +7,9 @@ import Home from "./components/home";
 import BoardLibrarian from "./components/librarian/dashboardLibrarian";
 import BoardAdmin from "./components/admin/dashboardAdmin";
 import BoardStudents from "./components/student/dashboardStudents";
-import PrivateRouteAdmin from './common/protectedRouteAdmin';
-import PrivateRouterLibrarian from './common/protectedRouteLibrarian';
-import PrivateRouteStudent from './common/protectedRouteStudent';
+import PrivateRouteAdmin from "./common/protectedRouteAdmin";
+import PrivateRouterLibrarian from "./common/protectedRouteLibrarian";
+import PrivateRouteStudent from "./common/protectedRouteStudent";
 import Footer from "./components/footer";
 import MenuMain from "./components/menuMain";
 import NotFoundRoute from "./components/notfoundPage";
@@ -20,12 +20,11 @@ class App extends Component {
     super(props);
 
     this.state = {
-      content: 'hello'
+      content: "hello",
     };
   }
 
   render() {
-
     return (
       <div className="AppMain">
         <MenuMain />
@@ -35,9 +34,30 @@ class App extends Component {
             <Route path="/" element={<Home />} />
             <Route path={routes.HOME} element={<Home />} />
             <Route path={routes.LOGIN} element={<Login />} />
-            <Route path={routes.DASHBOARD_LIBRARIAN} element={<PrivateRouterLibrarian><BoardLibrarian /></PrivateRouterLibrarian>} />
-            <Route path={routes.DASHBOARD_STUDENTS} element={<PrivateRouteStudent><BoardStudents /></PrivateRouteStudent>} />
-            <Route path={routes.DASHBOARD_ADMIN} element={<PrivateRouteAdmin><BoardAdmin /></PrivateRouteAdmin>} />
+            <Route
+              path={routes.DASHBOARD_LIBRARIAN}
+              element={
+                <PrivateRouterLibrarian>
+                  <BoardLibrarian />
+                </PrivateRouterLibrarian>
+              }
+            />
+            <Route
+              path={routes.DASHBOARD_STUDENTS}
+              element={
+                <PrivateRouteStudent>
+                  <BoardStudents />
+                </PrivateRouteStudent>
+              }
+            />
+            <Route
+              path={routes.DASHBOARD_ADMIN}
+              element={
+                <PrivateRouteAdmin>
+                  <BoardAdmin />
+                </PrivateRouteAdmin>
+              }
+            />
             <Route path="*" element={<NotFoundRoute />} />
           </Routes>
         </div>

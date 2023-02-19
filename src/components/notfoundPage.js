@@ -5,7 +5,7 @@ export default class NotFoundRoute extends Component {
     super(props);
 
     this.state = {
-      content: ""
+      content: "",
     };
   }
 

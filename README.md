@@ -1,5 +1,7 @@
 ## Library Frontend web application
-
+```
+ format code: Prettier
+```
 ### References
 ```
 link: https://github.com/bezkoder/react-jwt-auth

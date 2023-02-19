@@ -8,11 +8,14 @@ class AuthService {
     return axios
       .post(`${API_URL}auth${routes.LOGIN}`, {
         email,
-        passWord
+        passWord,
       })
-      .then(response => {
+      .then((response) => {
         if (response.data.data.accessToken) {
-          localStorage.setItem(localStorageItem.USER, JSON.stringify(response.data.data));
+          localStorage.setItem(
+            localStorageItem.USER,
+            JSON.stringify(response.data.data)
+          );
         }
 
         return response.data;
@@ -24,7 +27,7 @@ class AuthService {
   }
 
   getCurrentUser() {
-    return JSON.parse(localStorage.getItem(localStorageItem.USER));;
+    return JSON.parse(localStorage.getItem(localStorageItem.USER));
   }
 }
 

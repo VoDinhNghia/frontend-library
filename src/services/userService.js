@@ -1,10 +1,14 @@
-import axios from 'axios';
-import authHeader from './authHeader';
-import { API_URL } from '../common/constant';
+import axios from "axios";
+import authHeader from "./authHeader";
+import { API_URL } from "../common/constant";
 
 class UserService {
   getAllUsers() {
-    return axios.get(`${API_URL}users/`, { headers: authHeader() });
+    return axios
+      .get(`${API_URL}users/`, { headers: authHeader() })
+      .then((res) => {
+        return res.data || [];
+      });
   }
 }
 
