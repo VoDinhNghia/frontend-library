@@ -14,6 +14,8 @@ import Footer from "./components/footer";
 import MenuMain from "./components/menuMain";
 import NotFoundRoute from "./components/notfoundPage";
 import { routes } from "./common/constant";
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
 
 class App extends Component {
   constructor(props) {
@@ -60,6 +62,7 @@ class App extends Component {
             />
             <Route path="*" element={<NotFoundRoute />} />
           </Routes>
+          <NotificationContainer />
         </div>
 
         <Footer />
