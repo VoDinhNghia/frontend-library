@@ -81,7 +81,7 @@ export default class BoardAdmin extends Component {
     });
   }
 
-  handleSubmit() {
+  async handleSubmit() {
     const {
       nameLibrary,
       year,
@@ -90,18 +90,13 @@ export default class BoardAdmin extends Component {
       description,
     } = this.state;
     const id = libraryInfo._id || "";
-    libraryService
-      .updateInfo(id, {
-        name: nameLibrary || libraryInfo.name,
-        foundYear: year || libraryInfo.foundYear,
-        librarian: librarian || libraryInfo.librarian?._id,
-        description: description || libraryInfo.description,
-      })
-      .then((response) => {
-        this.setState({
-          libraryInfo: response.data,
-        });
-      });
+    const updateBody = {
+      name: nameLibrary || libraryInfo.name,
+      foundYear: year || libraryInfo.foundYear,
+      librarian: librarian || libraryInfo.librarian?._id,
+      description: description || libraryInfo.description,
+    };
+    await libraryService.updateInfo(id, updateBody)
     this.setState({
       showModal: false,
       libraryInfo: this.getInfoLibrary(),
