@@ -107,8 +107,8 @@ export default class BoardAdmin extends Component {
     const { libraryInfo = {}, showModal, userList = [] } = this.state;
     const userInfo = userList.map((item) => {
       return {
-        id: item.user[0]?._id,
-        name: `${item.user[0]?.lastName} ${item.user[0]?.firstName}`,
+        id: item.profile?._id,
+        name: `${item.profile?.lastName} ${item.profile?.firstName}`,
       };
     });
     return (

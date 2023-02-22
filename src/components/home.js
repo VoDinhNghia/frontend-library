@@ -10,18 +10,14 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="container">
-        <header className="jumbotron">
-          <h3>Tin tức - Sự kiện</h3>
-          <ul>
-            <li>
-              <a href="http://localhost:8001/new-book">Sách mới</a>
-            </li>
-          </ul>
-        </header>
-        <header className="jumbotron">
-          <h3>Dịch vụ</h3>
-        </header>
+      <div>
+        <h3>Tin tức - Sự kiện</h3>
+        <ul>
+          <li>
+            <a href="http://localhost:8001/new-book">Sách mới</a>
+          </li>
+        </ul>
+        <h3>Dịch vụ</h3>
       </div>
     );
   }
