@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './index.css'
 
 export default class BoardLibrarian extends Component {
   constructor(props) {
@@ -11,10 +12,8 @@ export default class BoardLibrarian extends Component {
 
   render() {
     return (
-      <div className="container">
-        <header className="jumbotron">
-          <h3>Dashboard librarian page</h3>
-        </header>
+      <div className="DashBoardLibrary">
+        <h3>Dashboard librarian page</h3>
       </div>
     );
   }
