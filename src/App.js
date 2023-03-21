@@ -16,6 +16,7 @@ import NotFoundRoute from "./components/notfoundPage";
 import { routes } from "./common/constant";
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer } from 'react-notifications';
+import { socket } from "./services/socket";
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +26,16 @@ class App extends Component {
       content: "hello",
     };
   }
+
+  componentDidMount() {
+    console.log('socket io');
+    socket.on("connect", () => {
+      console.log('djdjdd', socket.connected);
+    });
+    socket.on('receive_message', data => this.setState({ content: data }));
+    console.log('kskskks', this.state.content)
+    socket.emit('receive_message', { test: 'test' })
+  };
 
   render() {
     return (

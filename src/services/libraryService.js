@@ -5,12 +5,12 @@ import { NotificationManager } from "react-notifications";
 
 class LibraryService {
   getInfoLibrary() {
-    return axios.get(`${API_URL}libraries/`, { headers: authHeader() });
+    return axios.get(`${API_URL}/api/library/`, { headers: authHeader() });
   }
 
   async updateInfo(id, body) {
     try {
-      const res = await axios.put(`${API_URL}libraries/${id}`, body, {
+      const res = await axios.put(`${API_URL}/api/library/${id}`, body, {
         headers: authHeader(),
       });
       if (res.data?.statusCode !== 200) {
