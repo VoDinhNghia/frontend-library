@@ -37,7 +37,7 @@ export default class BoardAdmin extends Component {
   getUserList() {
     userService.getAllUsers().then((res) => {
       this.setState({
-        userList: res.data,
+        userList: res.data?.data,
       });
     });
   }
@@ -108,7 +108,7 @@ export default class BoardAdmin extends Component {
     const userInfo = userList.map((item) => {
       return {
         id: item.profile?._id,
-        name: `${item.profile?.lastName} ${item.profile?.firstName}`,
+        name: `${item?.lastName} ${item?.firstName}`,
       };
     });
     return (

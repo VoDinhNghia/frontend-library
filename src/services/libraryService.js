@@ -1,5 +1,5 @@
 import axios from "axios";
-import authHeader from "./authHeader";
+import { authHeader } from "./authHeader";
 import { API_URL } from "../common/constant";
 import { NotificationManager } from "react-notifications";
 
