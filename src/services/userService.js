@@ -5,7 +5,7 @@ import { API_URL } from "../common/constant";
 class UserService {
   getAllUsers() {
     return axios
-      .get(`${API_URL}users/`, { headers: authHeader() })
+      .get(`${API_URL}/api/users/`, { headers: authHeader() })
       .then((res) => {
         return res.data || [];
       });

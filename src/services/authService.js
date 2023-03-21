@@ -6,7 +6,7 @@ import { API_URL } from "../common/constant";
 class AuthService {
   login(email, passWord) {
     return axios
-      .post(`${API_URL}auth${routes.LOGIN}`, {
+      .post(`${API_URL}/api/auth${routes.LOGIN}`, {
         email,
         passWord,
       })
