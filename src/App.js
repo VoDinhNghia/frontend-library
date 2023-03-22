@@ -29,12 +29,10 @@ class App extends Component {
 
   componentDidMount() {
     console.log('socket io');
-    socket.on("connect", () => {
-      console.log('djdjdd', socket.connected);
-    });
-    socket.on('receive_message', data => this.setState({ content: data }));
-    console.log('kskskks', this.state.content)
-    socket.emit('receive_message', { test: 'test' })
+    socket.connect();
+    console.log('connected', socket.connected);
+    socket.on('test_message', (data) => { console.log('data', data) });
+    socket.emit('test_message', { test: 'test' })
   };
 
   render() {
