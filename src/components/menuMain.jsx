@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../services/authService";
+import { BsHouseFill, BsFillArrowRightSquareFill, BsFillArrowLeftCircleFill } from "react-icons/bs";
 import EventBus from "../common/eventBus";
 import { roles, routes, LINKS } from "../common/constant";
 
@@ -52,71 +53,73 @@ export default class MenuMain extends Component {
   render() {
     const { currentUser, showLibraryBoard, showAdminBoard } = this.state;
     return (
-      <nav className="navbar navbar-expand bg-light">
-        <div className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link to={routes.HOME} className="nav-link">
-              Home
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <a
-              target="_blank"
-              href={LINKS.UNIVERSITY}
-              className="nav-link"
-              rel="noreferrer"
-            >
-              university
-            </a>
-          </li>
-
-          <li className="nav-item">
-            <a
-              target="_blank"
-              href={LINKS.ATTENDANCE}
-              className="nav-link"
-              rel="noreferrer"
-            >
-              attendance
-            </a>
-          </li>
-
-          {showLibraryBoard && (
+      <div className="MenuMain">
+        <nav className="navbar navbar-expand">
+          <div className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to={routes.DASHBOARD_LIBRARIAN} className="nav-link">
-                dashboard librarian
+              <Link to={routes.HOME} className="nav-link">
+                <BsHouseFill /> Home
               </Link>
             </li>
-          )}
 
-          {showAdminBoard && (
             <li className="nav-item">
-              <Link to={routes.DASHBOARD_ADMIN} className="nav-link">
-                dashboard admin
-              </Link>
-            </li>
-          )}
-        </div>
-
-        {currentUser ? (
-          <div className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a href={routes.LOGIN} className="nav-link" onClick={this.logOut}>
-                Log out
+              <a
+                target="_blank"
+                href={LINKS.UNIVERSITY}
+                className="nav-link"
+                rel="noreferrer"
+              >
+                university
               </a>
             </li>
-          </div>
-        ) : (
-          <div className="navbar-nav ml-auto">
+
             <li className="nav-item">
-              <Link to={routes.LOGIN} className="nav-link">
-                Login
-              </Link>
+              <a
+                target="_blank"
+                href={LINKS.ATTENDANCE}
+                className="nav-link"
+                rel="noreferrer"
+              >
+                attendance
+              </a>
             </li>
+
+            {showLibraryBoard && (
+              <li className="nav-item">
+                <Link to={routes.DASHBOARD_LIBRARIAN} className="nav-link">
+                  dashboard librarian
+                </Link>
+              </li>
+            )}
+
+            {showAdminBoard && (
+              <li className="nav-item">
+                <Link to={routes.DASHBOARD_ADMIN} className="nav-link">
+                  dashboard admin
+                </Link>
+              </li>
+            )}
           </div>
-        )}
-      </nav>
+
+          {currentUser ? (
+            <div className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a href={routes.LOGIN} className="nav-link" onClick={this.logOut}>
+                  Log out <BsFillArrowRightSquareFill />
+                </a>
+              </li>
+            </div>
+          ) : (
+            <div className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <Link to={routes.LOGIN} className="nav-link">
+                  Login <BsFillArrowLeftCircleFill />
+                </Link>
+              </li>
+            </div>
+          )}
+        </nav>
+      </div>
     );
   }
 }

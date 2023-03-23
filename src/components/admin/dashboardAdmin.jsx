@@ -5,6 +5,7 @@ import { BsPencil } from "react-icons/bs";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import "./index.css";
+import moment from "moment/moment";
 
 export default class BoardAdmin extends Component {
   constructor(props) {
@@ -93,7 +94,7 @@ export default class BoardAdmin extends Component {
     const updateBody = {
       name: nameLibrary || libraryInfo.name,
       foundYear: year || libraryInfo.foundYear,
-      librarian: librarian || libraryInfo.librarian?._id,
+      librarian: librarian || libraryInfo.librarian?.id,
       description: description || libraryInfo.description,
     };
     await libraryService.updateInfo(id, updateBody)
@@ -107,7 +108,7 @@ export default class BoardAdmin extends Component {
     const { libraryInfo = {}, showModal, userList = [] } = this.state;
     const userInfo = userList.map((item) => {
       return {
-        id: item.profile?._id,
+        id: item.id,
         name: `${item?.lastName} ${item?.firstName}`,
       };
     });
@@ -126,10 +127,10 @@ export default class BoardAdmin extends Component {
             </span>
           </h3>
           <h6>Tên: {libraryInfo.name || ""}</h6>
-          <h6>Năm thành lập: {libraryInfo.foundYear || ""}</h6>
+          <h6>Năm thành lập: {libraryInfo.foundYear ? moment(libraryInfo.foundYear).format('DD-MM-YYYY') : ''}</h6>
           <h6>
             Người quản lý:{" "}
-            {`${libraryInfo?.librarian?.lastName} ${libraryInfo?.librarian?.firstName}`}
+            {`${libraryInfo?.librarian?.lastName || ''} ${libraryInfo?.librarian?.firstName || ''}`}
           </h6>
           <h6>Giới thiệu: {libraryInfo?.description || ""}</h6>
         </header>
@@ -156,7 +157,7 @@ export default class BoardAdmin extends Component {
             <select
               className="nameLibrary"
               onChange={(value) => this.updateField(value, "librarian")}
-              defaultValue={libraryInfo.librarian?._id}
+              defaultValue={libraryInfo.librarian?.id}
             >
               {userInfo.map((item) => {
                 return <option value={item.id}>{item.name}</option>;

@@ -103,7 +103,7 @@ class Login extends Component {
       <div className="col-md-12">
         <div className="card card-container">
           <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+            src="/image/icon-login.png"
             alt="profile-img"
             className="profile-img-card"
           />
