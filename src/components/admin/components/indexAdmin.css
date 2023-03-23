@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.MenuAdmin .navbarMenu {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
+  transition: all 0.5s ease;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.MenuAdmin .navbarList {
+  list-style-type: none;
+  
+}
+.MenuAdmin .navbarLi {
+  display: inline-block;
+  padding: 0px;
+  position: relative;
+  top: 20px;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 38px;
+  color: blue;
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+.LibrarySetting {
+  margin-left: 20px;
+  height: auto;
+  padding: 15px;
+  background-color: rgb(251, 253, 255);
+  border-radius: 10px;
+  box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
+  transition: all 0.5s ease;
+  margin-bottom: 15px;
+}
+
+.LibrarySetting .Jumbotron {
+  color: black;
+  padding-left: 15px;
+}
+
+.LibrarySetting .BtnEditInfoLibrary {
+  color: blue;
+  width: 60px;
+  background-color: white;
+  border: none;
+  font-size: 22px;
+} 
+
+.LibrarySetting .EditInfoLibrary {
+  float: right;
+}
+
+.ModalUpdateLibrary .WidthInput {
+  width: 100%;
+}
+
+.ModalUpdateLibrary input {
+  border: 1px solid rgb(210, 221, 243);
+  border-radius: 5px;
+  padding-left: 10px;
+  height: 40px;
+}
+
+.ModalUpdateLibrary select {
+  border: 1px solid rgb(210, 221, 243);
+  border-radius: 5px;
+  padding-left: 10px;
+  height: 40px;
+}
+
+.ModalUpdateLibrary textarea {
+  border: 1px solid rgb(210, 221, 243);
+  border-radius: 5px;
+  padding-left: 10px;
+  height: 100px;
+}
