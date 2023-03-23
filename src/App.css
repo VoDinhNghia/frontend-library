@@ -45,12 +45,24 @@ label {
 }
 
 .Hompage {
-  background-color: #edf7f5;
+  background-color: rgb(251, 253, 255);
+  border-radius: 10px;
+  box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
+  transition: all 0.5s ease;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
 }
 
-.Hompage h3 {
+.Hompage h4 {
   color: blue;
+}
+
+.Hompage .SearchHomePage {
+  width: 70%;
+  margin: auto;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 20px;
+  border: 1px solid blue;
 }
