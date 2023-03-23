@@ -16,13 +16,10 @@ export default function Footer() {
             <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
                 <MDBIcon icon="gem" className="me-3" />
-                Industrial University of Ho Chi Minh City
+                Introduction
               </h6>
               <p>
-                Trường Đại học Công nghiệp Thành phố Hồ Chí Minh là một trường
-                đại học định hướng ứng dụng và thực hành, trực thuộc Bộ Công
-                Thương, chuyên đào tạo nhóm ngành kinh tế công nghiệp và kỹ
-                thuật công nghiệp, được thành lập từ ngày 24 tháng 12 năm 2004.
+                write something....
               </p>
             </MDBCol>
 
@@ -32,18 +29,10 @@ export default function Footer() {
 
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Branchs</h6>
-              <p>Cơ sở Hồ Chí Minh</p>
-              <p>Cơ sở Quảng Ngãi</p>
-              <p>Cơ sở Thanh Hóa</p>
             </MDBCol>
 
             <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-              <p>
-                12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TP. HCM
-              </p>
-              <p>email: vodinhnghia85@gmail.com</p>
-              <p>Phone: (+84) 0365572875</p>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
@@ -51,7 +40,7 @@ export default function Footer() {
 
       <div
         className="text-center p-4"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
+        style={{ color: "white", backgroundColor: "#026aa7", boxShadow: "inset 0 -4px 0 0 rgba(0, 0, 0, 0.2)" }}
       >
         © 2023
       </div>

@@ -10,7 +10,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Hompage">
         <h3>Tin tức - Sự kiện</h3>
         <ul>
           <li>
