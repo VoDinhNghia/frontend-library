@@ -58,7 +58,7 @@ export default class MenuMain extends Component {
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={routes.HOME} className="nav-link">
-                <BsHouseFill /> Home
+                <BsHouseFill /> Trang chủ
               </Link>
             </li>
 
@@ -69,7 +69,7 @@ export default class MenuMain extends Component {
                 className="nav-link"
                 rel="noreferrer"
               >
-                university
+                Tài liệu
               </a>
             </li>
 
@@ -80,14 +80,14 @@ export default class MenuMain extends Component {
                 className="nav-link"
                 rel="noreferrer"
               >
-                attendance
+                Kỹ năng
               </a>
             </li>
 
             {showLibraryBoard && (
               <li className="nav-item">
                 <Link to={routes.DASHBOARD_LIBRARIAN} className="nav-link">
-                  dashboard librarian
+                  Quản lý thư viện
                 </Link>
               </li>
             )}
@@ -95,7 +95,7 @@ export default class MenuMain extends Component {
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={routes.DASHBOARD_ADMIN} className="nav-link">
-                  dashboard admin
+                  Cài đặt thư viện
                 </Link>
               </li>
             )}
@@ -105,7 +105,7 @@ export default class MenuMain extends Component {
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a href={routes.LOGIN} className="nav-link" onClick={this.logOut}>
-                  Log out <BsFillArrowRightSquareFill />
+                  Đăng xuất <BsFillArrowRightSquareFill />
                 </a>
               </li>
             </div>
@@ -113,7 +113,7 @@ export default class MenuMain extends Component {
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link to={routes.LOGIN} className="nav-link">
-                  Login <BsFillArrowLeftCircleFill />
+                  Đăng nhập <BsFillArrowLeftCircleFill />
                 </Link>
               </li>
             </div>
